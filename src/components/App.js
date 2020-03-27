@@ -6,8 +6,11 @@ import Layout from "./Layout";
 
 // pages
 import Error from "../pages/error";
-import Login from "../pages/login/Login";
-import Register from "../pages/register/Register";
+import Login from "../pages/auth/Login";
+import ForgotPassword from "../pages/auth/ForgotPassword";
+import ForgotPasswordConfirm from "../pages/auth/ForgotPasswordConfirm";
+import ResetPassword from "../pages/auth/ResetPassword";
+import Register from "../pages/auth/Register";
 
 // context
 import { useUserState } from "../context/UserContext";
@@ -27,6 +30,12 @@ export default function App() {
         />
         <PrivateRoute path="/app" component={Layout} />
         <PublicRoute path="/login" component={Login} />
+        <PublicRoute path="/forgot_password" component={ForgotPassword} />
+        <PublicRoute
+          path="/forgot_password_confirm"
+          component={ForgotPasswordConfirm}
+        />
+        <PublicRoute path="/reset_password" component={ResetPassword} />
         <PublicRoute path="/register" component={Register} />
         <Route component={Error} />
       </Switch>

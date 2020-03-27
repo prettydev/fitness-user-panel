@@ -1,15 +1,11 @@
 import { makeStyles } from "@material-ui/styles";
+import { colors, style } from "../../style";
 
 export default makeStyles(theme => ({
   container: {
-    height: "100vh",
-    width: "100vw",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    position: "absolute",
-    top: 0,
-    left: 0,
   },
   logotypeContainer: {
     backgroundColor: theme.palette.primary.main,
@@ -36,6 +32,18 @@ export default makeStyles(theme => ({
     fontSize: 84,
     [theme.breakpoints.down("md")]: {
       fontSize: 48,
+    },
+  },
+  headerContainer: {
+    width: "100%",
+    height: "100",
+    display: "flex",
+    backgroundColor: "black",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      width: "50%",
     },
   },
   formContainer: {
@@ -111,23 +119,46 @@ export default makeStyles(theme => ({
   },
   textFieldUnderline: {
     "&:before": {
-      borderBottomColor: theme.palette.primary.light,
+      borderColor: `${colors.inputBdColor} !important`,
     },
     "&:after": {
-      borderBottomColor: theme.palette.primary.main,
+      borderColor: `${colors.inputBdColor} !important`,
     },
     "&:hover:before": {
-      borderBottomColor: `${theme.palette.primary.light} !important`,
+      borderColor: `${colors.inputBdColor} !important`,
     },
   },
   textField: {
-    borderBottomColor: theme.palette.background.light,
+    borderColor: colors.inputBdColor,
+    background: colors.inputBgColor,
+    borderWidth: 5,
+    color: "white",
+  },
+  centerTextField: {
+    borderColor: colors.inputBdColor,
+    background: colors.inputBgColor,
+    borderWidth: 5,
+    color: "white",
+    textAlign: "center",
   },
   formButtons: {
     width: "100%",
     marginTop: theme.spacing(4),
     display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  formRowButtons: {
+    width: "100%",
+    marginTop: theme.spacing(4),
+    display: "flex",
     justifyContent: "space-between",
+  },
+  linkButtons: {
+    width: "100%",
+    marginTop: theme.spacing(4),
+    display: "flex",
+    justifyContent: "center",
     alignItems: "center",
   },
   forgetButton: {

@@ -17,7 +17,7 @@ import classnames from "classnames";
 
 // styles
 import useStyles from "./styles";
-import style from "../../style";
+import { colors, style } from "../../style";
 
 // logo
 import logo from "../../images/logo.svg";
@@ -46,13 +46,22 @@ function Login(props) {
 
             <Typography
               variant="h2"
-              style={{ color: "#0FFFFF" }}
+              style={{ color: colors.lightGreen }}
               align="center"
             >
               Aliados
             </Typography>
-            <Typography variant="h5" align="center" style={{ color: "white" }}>
-              Iniciar sesión a su cuenta de aliado
+            <Typography
+              variant="h5"
+              align="center"
+              style={{
+                color: colors.white,
+                marginTop: 30,
+                marginLeft: -20,
+                marginRight: -20,
+              }}
+            >
+              Cambiar contraseña
             </Typography>
 
             <Fade in={error}>
@@ -62,41 +71,67 @@ function Login(props) {
             </Fade>
 
             <TextField
-              id="email"
-              value={loginValue}
-              onChange={e => setLoginValue(e.target.value)}
-              margin="normal"
-              color="white"
-              variant="outlined"
-              placeholder="Email"
-              type="email"
-              fullWidth
-              InputProps={{
-                classes: {
-                  underline: styles.textFieldUnderline,
-                  input: styles.textField,
-                },
-              }}
-            />
-
-            <TextField
               id="password"
               value={passwordValue}
               onChange={e => setPasswordValue(e.target.value)}
               margin="normal"
-              color="white"
+              color={colors.white}
               variant="outlined"
-              placeholder="Contraseña"
+              placeholder="Nueva contraseña"
               type="password"
               fullWidth
               InputProps={{
                 classes: {
                   underline: styles.textFieldUnderline,
-                  input: styles.textField,
+                  input: styles.centerTextField,
                 },
               }}
             />
-            <div className={styles.formButtons}>
+
+            <TextField
+              id="password2"
+              value={passwordValue}
+              onChange={e => setPasswordValue(e.target.value)}
+              margin="normal"
+              color={colors.white}
+              variant="outlined"
+              placeholder="Confirmar nueva contraseña"
+              type="password"
+              fullWidth
+              InputProps={{
+                classes: {
+                  underline: styles.textFieldUnderline,
+                  input: styles.centerTextField,
+                },
+              }}
+            />
+
+            <div className={styles.formRowButtons}>
+              {isLoading ? (
+                <CircularProgress size={26} className={styles.loginLoader} />
+              ) : (
+                <Button
+                  // disabled={
+                  //   loginValue.length === 0 || passwordValue.length === 0
+                  // }
+                  onClick={() =>
+                    loginUser(
+                      userDispatch,
+                      loginValue,
+                      passwordValue,
+                      props.history,
+                      setIsLoading,
+                      setError,
+                    )
+                  }
+                  variant="outlined"
+                  size="large"
+                  style={style.cancelBtnStyle}
+                >
+                  CANCELAR
+                </Button>
+              )}
+
               {isLoading ? (
                 <CircularProgress size={26} className={styles.loginLoader} />
               ) : (
@@ -118,14 +153,9 @@ function Login(props) {
                   size="large"
                   style={style.loginBtnStyle}
                 >
-                  ingresar
+                  GUARDAR
                 </Button>
               )}
-            </div>
-            <div className={styles.linkButtons}>
-              <Link href="#" underline="always" onClick={() => {}}>
-                Se me olvido la contraseña
-              </Link>
             </div>
           </React.Fragment>
         </div>
