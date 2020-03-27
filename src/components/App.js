@@ -6,7 +6,8 @@ import Layout from "./Layout";
 
 // pages
 import Error from "../pages/error";
-import Login from "../pages/login";
+import Login from "../pages/login/Login";
+import Register from "../pages/register/Register";
 
 // context
 import { useUserState } from "../context/UserContext";
@@ -26,6 +27,7 @@ export default function App() {
         />
         <PrivateRoute path="/app" component={Layout} />
         <PublicRoute path="/login" component={Login} />
+        <PublicRoute path="/register" component={Register} />
         <Route component={Error} />
       </Switch>
     </HashRouter>

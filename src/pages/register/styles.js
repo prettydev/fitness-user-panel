@@ -1,5 +1,4 @@
 import { makeStyles } from "@material-ui/styles";
-import style from "../../style";
 
 export default makeStyles(theme => ({
   container: {
@@ -112,33 +111,23 @@ export default makeStyles(theme => ({
   },
   textFieldUnderline: {
     "&:before": {
-      borderColor: `${style.inputBdColor} !important`,
+      borderBottomColor: theme.palette.primary.light,
     },
     "&:after": {
-      borderColor: `${style.inputBdColor} !important`,
+      borderBottomColor: theme.palette.primary.main,
     },
     "&:hover:before": {
-      borderColor: `${style.inputBdColor} !important`,
+      borderBottomColor: `${theme.palette.primary.light} !important`,
     },
   },
   textField: {
-    borderColor: style.inputBdColor,
-    background: style.inputBgColor,
-    borderWidth: 5,
-    color: "white",
+    borderBottomColor: theme.palette.background.light,
   },
   formButtons: {
     width: "100%",
     marginTop: theme.spacing(4),
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  linkButtons: {
-    width: "100%",
-    marginTop: theme.spacing(4),
-    display: "flex",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   forgetButton: {
