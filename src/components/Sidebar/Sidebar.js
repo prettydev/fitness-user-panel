@@ -3,7 +3,7 @@ import { Drawer, IconButton, List } from "@material-ui/core";
 import {
   HomeOutlined as HomeIcon,
   NotificationsNone as NotificationsIcon,
-  FormatSize as TypographyIcon,
+  EventAvailableOutlined as ActivitiesIcon,
   FilterNone as UIElementsIcon,
   BorderAll as TableIcon,
   QuestionAnswer as SupportIcon,
@@ -33,9 +33,9 @@ const structure = [
   { id: 0, label: "Inicio", link: "/app/dashboard", icon: <HomeIcon /> },
   {
     id: 1,
-    label: "Typography",
-    link: "/app/typography",
-    icon: <TypographyIcon />,
+    label: "Actividades",
+    link: "/app/activities",
+    icon: <ActivitiesIcon />,
   },
   { id: 2, label: "Tables", link: "/app/tables", icon: <TableIcon /> },
   {
@@ -55,11 +55,6 @@ const structure = [
       { label: "Maps", link: "/app/ui/maps" },
     ],
   },
-  { id: 5, type: "divider" },
-  { id: 6, type: "title", label: "HELP" },
-  { id: 7, label: "Library", link: "", icon: <LibraryIcon /> },
-  { id: 8, label: "Support", link: "", icon: <SupportIcon /> },
-  { id: 9, label: "FAQ", link: "", icon: <FAQIcon /> },
 ];
 
 function Sidebar({ location }) {

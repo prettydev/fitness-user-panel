@@ -44,7 +44,7 @@ import useStyles from "./styles";
 // components
 import mock from "./mock";
 import Widget from "../../components/Widget";
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../components/PageTitle/PageTitle";
 import { Typography } from "../../components/Wrappers";
 import Dot from "../../components/Sidebar/components/Dot";
 import RDot from "../../components/Sidebar/components/RDot";
@@ -186,7 +186,9 @@ export default function Dashboard(props) {
               label=""
               style={{ color: colors.white }}
             >
-              <MenuItem value={0}>last week</MenuItem>
+              <MenuItem value={0} style={{ backgroundColor: "blue" }}>
+                last week
+              </MenuItem>
               <MenuItem value={1}>last month</MenuItem>
               <MenuItem value={2}>last 3 months</MenuItem>
               <MenuItem value={3}>last 6 months</MenuItem>

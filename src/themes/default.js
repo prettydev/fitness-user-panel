@@ -67,7 +67,8 @@ export default {
     },
     background: {
       default: "#222F40",
-      light: "#F3F5FF",
+      light: "#222F40",
+      // light: "#F3F5FF",
     },
   },
   customShadows: {
@@ -92,7 +93,7 @@ export default {
     },
     MuiSelect: {
       icon: {
-        // color: "#B9B9B9",
+        //color: "#B9B9B9",
         color: "#fff",
       },
     },
