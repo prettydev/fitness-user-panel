@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { colors } from "../../style";
 
 const drawerWidth = 240;
 
@@ -21,6 +22,7 @@ export default makeStyles(theme => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
+    background: colors.sidebarBgColor,
   },
   drawerClose: {
     transition: theme.transitions.create("width", {
@@ -32,6 +34,7 @@ export default makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       width: drawerWidth,
     },
+    background: colors.sidebarBgColor,
   },
   toolbar: {
     ...theme.mixins.toolbar,

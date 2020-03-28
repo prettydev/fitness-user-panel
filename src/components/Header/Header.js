@@ -7,6 +7,7 @@ import {
   Menu,
   MenuItem,
   Fab,
+  Box,
   Link,
 } from "@material-ui/core";
 import {
@@ -22,6 +23,8 @@ import classNames from "classnames";
 
 // styles
 import useStyles from "./styles";
+import { colors, style } from "../../style";
+import logo from "../../images/logo.svg";
 
 // components
 import { Badge, Typography, Button } from "../Wrappers/Wrappers";
@@ -136,9 +139,23 @@ export default function Header(props) {
             />
           )}
         </IconButton>
-        <Typography variant="h6" weight="medium" className={classes.logotype}>
-          React Material Admin
-        </Typography>
+
+        <Box
+          flexDirection="column"
+          style={{ display: "flex", justifyContent: "center" }}
+        >
+          <Box style={{ textAlign: "center" }}>
+            <img src={logo} alt="Fitster" style={{ width: 100 }} />
+          </Box>
+          <Typography
+            variant="body"
+            style={{ color: colors.lightGreen }}
+            align="center"
+          >
+            Aliados
+          </Typography>
+        </Box>
+
         <div className={classes.grow} />
         <div
           className={classNames(classes.search, {

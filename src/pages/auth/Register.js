@@ -349,9 +349,8 @@ function Register(props) {
             Utilizaremos la información que usted nos envíe para informarle
             sobre las oportunidades de alianza y proporcionarle otras
             actualizaciones. Al llenar y enviar este formulario, usted acepta
-            nuestros{" "}
-            <font color={colors.lightBlue}>Términos y condiciones</font> y la{" "}
-            <font color={colors.lightBlue}>Política de privacidad</font>.
+            nuestros <font color={colors.skyBlue}>Términos y condiciones</font>{" "}
+            y la <font color={colors.skyBlue}>Política de privacidad</font>.
           </Typography>
         </Box>
 

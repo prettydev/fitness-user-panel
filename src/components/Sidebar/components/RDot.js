@@ -5,23 +5,23 @@ import classnames from "classnames";
 // styles
 var useStyles = makeStyles(theme => ({
   dotBase: {
-    width: 24,
+    width: 8,
     height: 8,
     backgroundColor: theme.palette.text.hint,
-    borderRadius: "20%",
+    borderRadius: "50%",
     transition: theme.transitions.create("background-color"),
   },
   dotSmall: {
-    width: 15,
+    width: 5,
     height: 5,
   },
   dotLarge: {
-    width: 33,
+    width: 11,
     height: 11,
   },
 }));
 
-export default function Dot({ size, color }) {
+export default function RDot({ size, color }) {
   var classes = useStyles();
   var theme = useTheme();
 

@@ -30,11 +30,6 @@ export default makeStyles(theme => ({
     alignItems: "flex-end",
     marginRight: theme.spacing(1),
   },
-  legendItemContainer: {
-    display: "flex",
-    alignItems: "center",
-    marginBottom: theme.spacing(1),
-  },
   fullHeightBody: {
     display: "flex",
     flexGrow: 1,
@@ -79,6 +74,7 @@ export default makeStyles(theme => ({
   mainChartHeader: {
     width: "100%",
     display: "flex",
+    flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
     [theme.breakpoints.only("xs")]: {
@@ -102,7 +98,7 @@ export default makeStyles(theme => ({
     marginLeft: theme.spacing(3),
   },
   mainChartSelectRoot: {
-    borderColor: theme.palette.text.hint + "80 !important",
+    // borderColor: theme.palette.text.hint+"80 !important",
   },
   mainChartSelect: {
     padding: 10,

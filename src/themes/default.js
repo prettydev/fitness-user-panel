@@ -1,12 +1,14 @@
 import tinycolor from "tinycolor2";
 
+import { colors } from "../style";
+
 // const primary = "#536DFE";
 // const secondary = "#FF5C93";
 // const warning = "#FFC260";
 // const success = "#3CD4A0";
 // const info = "#9013FE";
 
-const primary = "#00C0FC";
+const primary = "#182433";
 const secondary = "#00CE98";
 const warning = "#FFC260";
 const success = "#3CD4A0";
@@ -19,22 +21,14 @@ export default {
   palette: {
     primary: {
       main: primary,
-      light: tinycolor(primary)
-        .lighten(lightenRate)
-        .toHexString(),
-      dark: tinycolor(primary)
-        .darken(darkenRate)
-        .toHexString(),
+      light: colors.globalWdColor, //tinycolor(primary).lighten(lightenRate).toHexString(),
+      dark: colors.globalWdColor, //tinycolor(primary).darken(darkenRate).toHexString(),
     },
     secondary: {
       main: secondary,
-      light: tinycolor(secondary)
-        .lighten(lightenRate)
-        .toHexString(),
-      dark: tinycolor(secondary)
-        .darken(darkenRate)
-        .toHexString(),
-      contrastText: "#FFFFFF",
+      light: colors.globalWdColor, //tinycolor(secondary).lighten(lightenRate).toHexString(),
+      dark: colors.globalWdColor, //tinycolor(secondary).darken(darkenRate).toHexString(),
+      contrastText: "#0FFFFF",
     },
     warning: {
       main: warning,
@@ -64,12 +58,15 @@ export default {
         .toHexString(),
     },
     text: {
-      primary: "#4A4A4A",
-      secondary: "#6E6E6E",
-      hint: "#B9B9B9",
+      // primary: "#4A4A4A",
+      // secondary: "#6E6E6E",
+      // hint: "#B9B9B9",
+      primary: "#fff",
+      secondary: "#fff",
+      hint: "#fff",
     },
     background: {
-      default: "#F6F7FF",
+      default: "#222F40",
       light: "#F3F5FF",
     },
   },
@@ -95,7 +92,8 @@ export default {
     },
     MuiSelect: {
       icon: {
-        color: "#B9B9B9",
+        // color: "#B9B9B9",
+        color: "#fff",
       },
     },
     MuiListItem: {

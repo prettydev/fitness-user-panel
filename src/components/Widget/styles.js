@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { colors } from "../../style";
 
 export default makeStyles(theme => ({
   widgetWrapper: {
@@ -14,6 +15,7 @@ export default makeStyles(theme => ({
   },
   widgetRoot: {
     boxShadow: theme.customShadows.widget,
+    backgroundColor: colors.globalWdColor,
   },
   widgetBody: {
     paddingBottom: theme.spacing(3),

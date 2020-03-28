@@ -23,10 +23,6 @@ export default makeStyles(theme => ({
     alignItems: "flex-end",
     justifyContent: "space-between",
   },
-  totalValue: {
-    display: "flex",
-    alignItems: "baseline",
-  },
   profitArrow: {
     transform: "rotate(-45deg)",
     fill: theme.palette.success.main,
@@ -39,7 +35,7 @@ export default makeStyles(theme => ({
     padding: 10,
     paddingRight: 25,
     "&:focus": {
-      backgroundColor: "white",
+      // backgroundColor: "white",
     },
   },
 }));

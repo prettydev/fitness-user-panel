@@ -5,6 +5,8 @@ import {
   Menu,
   MenuItem,
   Typography,
+  Select,
+  Input,
 } from "@material-ui/core";
 import { MoreVert as MoreIcon } from "@material-ui/icons";
 import classnames from "classnames";
@@ -27,6 +29,8 @@ export default function Widget({
   var [moreButtonRef, setMoreButtonRef] = useState(null);
   var [isMoreMenuOpen, setMoreMenuOpen] = useState(false);
 
+  const [type, setType] = useState(0);
+
   return (
     <div className={classes.widgetWrapper}>
       <Paper className={classes.paper} classes={{ root: classes.widgetRoot }}>
@@ -38,18 +42,35 @@ export default function Widget({
               <Typography variant="h5" color="textSecondary">
                 {title}
               </Typography>
-              {!disableWidgetMenu && (
-                <IconButton
-                  color="primary"
-                  classes={{ root: classes.moreButton }}
-                  aria-owns="widget-menu"
-                  aria-haspopup="true"
-                  onClick={() => setMoreMenuOpen(true)}
-                  buttonRef={setMoreButtonRef}
-                >
-                  <MoreIcon />
-                </IconButton>
-              )}
+              <Select
+                value={type}
+                onChange={e => setType(e.target.value)}
+                input={
+                  <Input
+                    disableUnderline
+                    classes={{ input: classes.selectInput }}
+                  />
+                }
+                autoWidth
+              >
+                <MenuItem value={0}>Bodycombat</MenuItem>
+                <MenuItem value={1}>Bodycombat1</MenuItem>
+                <MenuItem value={2}>Bodycombat2</MenuItem>
+              </Select>
+              {
+                //   !false && (
+                //   <IconButton
+                //     color="primary"
+                //     classes={{ root: classes.moreButton }}
+                //     aria-owns="widget-menu"
+                //     aria-haspopup="true"
+                //     onClick={() => setMoreMenuOpen(true)}
+                //     buttonRef={setMoreButtonRef}
+                //   >
+                //     <MoreIcon />
+                //   </IconButton>
+                // )
+              }
             </React.Fragment>
           )}
         </div>
@@ -62,26 +83,29 @@ export default function Widget({
           {children}
         </div>
       </Paper>
-      <Menu
-        id="widget-menu"
-        open={isMoreMenuOpen}
-        anchorEl={moreButtonRef}
-        onClose={() => setMoreMenuOpen(false)}
-        disableAutoFocusItem
-      >
-        <MenuItem>
-          <Typography>Edit</Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography>Copy</Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography>Delete</Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography>Print</Typography>
-        </MenuItem>
-      </Menu>
+
+      {false && (
+        <Menu
+          id="widget-menu"
+          open={isMoreMenuOpen}
+          anchorEl={moreButtonRef}
+          onClose={() => setMoreMenuOpen(false)}
+          disableAutoFocusItem
+        >
+          <MenuItem>
+            <Typography>Edit</Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography>Copy</Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography>Delete</Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography>Print</Typography>
+          </MenuItem>
+        </Menu>
+      )}
     </div>
   );
 }
