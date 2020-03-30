@@ -58,12 +58,12 @@ export default {
         .toHexString(),
     },
     text: {
-      // primary: "#4A4A4A",
-      // secondary: "#6E6E6E",
-      // hint: "#B9B9B9",
-      primary: "#fff",
-      secondary: "#fff",
-      hint: "#fff",
+      primary: "#4A4A4A",
+      secondary: "#6E6E6E",
+      hint: "#B9B9B9",
+      // primary: "#fff",
+      // secondary: "#fff",
+      // hint: "#fff",
     },
     background: {
       default: "#222F40",
@@ -72,12 +72,16 @@ export default {
     },
   },
   customShadows: {
+    // widget: "0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+    // widgetDark: "0px 3px 18px 0px #4558A3B3, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+    // widgetWide: "0px 12px 33px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+
     widget:
-      "0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+      "0px 3px 11px 0px #4558A3B3, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
     widgetDark:
       "0px 3px 18px 0px #4558A3B3, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
     widgetWide:
-      "0px 12px 33px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+      "0px 12px 33px 0px #4558A3B3, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
   },
   overrides: {
     MuiBackdrop: {
@@ -87,8 +91,9 @@ export default {
     },
     MuiMenu: {
       paper: {
+        // boxShadow: "0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
         boxShadow:
-          "0px 3px 11px 0px #E8EAFC, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
+          "0px 3px 11px 0px #111, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A",
       },
     },
     MuiSelect: {
@@ -100,21 +105,24 @@ export default {
     MuiListItem: {
       root: {
         "&$selected": {
-          backgroundColor: "#F3F5FF !important",
+          // backgroundColor: "#F3F5FF !important",
+          backgroundColor: "#111 !important",
           "&:focus": {
-            backgroundColor: "#F3F5FF",
+            // backgroundColor: "#F3F5FF",
+            backgroundColor: "#111",
           },
         },
       },
       button: {
         "&:hover, &:focus": {
-          backgroundColor: "#F3F5FF",
+          // backgroundColor: "#F3F5FF",
+          backgroundColor: "#111",
         },
       },
     },
     MuiTouchRipple: {
       child: {
-        backgroundColor: "white",
+        backgroundColor: "black",
       },
     },
     MuiTableRow: {
