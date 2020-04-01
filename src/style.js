@@ -1,4 +1,4 @@
-import inner_logo from "./images/inner_logo.svg";
+// import inner_logo from "./images/inner_logo.svg";
 import background from "./images/background.svg";
 import login_svg from "./images/login_btn.svg";
 
@@ -32,7 +32,7 @@ export const style = {
     width: "20%",
     height: "20%",
     position: "fixed",
-    backgroundImage: `url(${inner_logo})`,
+    // backgroundImage: `url(${inner_logo})`,
     backgroundSize: "cover",
     backgroundPosition: "50% 50%",
     backgroundRepeat: "no-repeat",

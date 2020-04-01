@@ -12,6 +12,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.11.1",
     "font-awesome": "^4.7.0",
+    "material-ui-avatar-picker": "^1.0.4",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.28",
     "mui-datatables": "^2.6.4",

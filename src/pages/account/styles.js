@@ -79,4 +79,7 @@ export default makeStyles(theme => ({
   notificationComponent: {
     paddingRight: theme.spacing(4),
   },
+  inputBox: {
+    padding: theme.spacing(2),
+  },
 }));

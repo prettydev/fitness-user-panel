@@ -2,9 +2,9 @@ import React from "react";
 import { Drawer, IconButton, List, withStyles } from "@material-ui/core";
 import {
   Home as HomeIcon,
-  NotificationsNone as NotificationsIcon,
+  SettingsOutlined,
   FilterNone as UIElementsIcon,
-  BorderAll as TableIcon,
+  BorderAll,
   QuestionAnswer as SupportIcon,
   LibraryBooks as LibraryIcon,
   HelpOutline as FAQIcon,
@@ -21,26 +21,15 @@ const structure = [
   {
     id: 1,
     label: "Activities",
-    link: "/app/ctivities",
+    link: "/app/activities",
     icon: <ActivitiesIcon />,
   },
-  { id: 2, label: "Tables", link: "/app/tables", icon: <TableIcon /> },
+  { id: 2, label: "Recursos", link: "/app/resources", icon: <BorderAll /> },
   {
     id: 3,
-    label: "Notifications",
-    link: "/app/notifications",
-    icon: <NotificationsIcon />,
-  },
-  {
-    id: 4,
-    label: "UI Elements",
-    link: "/app/ui",
-    icon: <UIElementsIcon />,
-    children: [
-      { label: "Icons", link: "/app/ui/icons" },
-      { label: "Charts", link: "/app/ui/charts" },
-      { label: "Maps", link: "/app/ui/maps" },
-    ],
+    label: "Cuenta",
+    link: "/app/account",
+    icon: <SettingsOutlined />,
   },
 ];
 
